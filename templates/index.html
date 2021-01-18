@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<!-- {% for cell in row %}
+{% endfor %} -->
+<body>
+    <table>
+        <caption>Assignment</caption>
+        {% for cell in dataheader %}
+        <tr>
+        <!-- <th>{{cell}}</th> -->
+        <th>{{cell.Sr_No}}</th>
+        <th>{{cell.instrument_token}}</th>
+        <th>{{cell.exchange_token}}</th>
+        <th>{{cell.tradingsymbol}}</th>
+        <th>{{cell.name}}</th>
+        <th>{{cell.last_price}}</th>
+        <th>{{cell.expiry}}</th>
+        <th>{{cell.strike}}</th>
+        <th>{{cell.tick_size}}</th>
+        <th>{{cell.lot_size}}</th>
+        <th>{{cell.instrument_type}}</th>
+        <th>{{cell.segment}}</th>
+        <th>{{cell.exchange}}</th>
+        {% endfor %} 
+    </tr>
+        {% for cell in dataset %}
+        <tr>
+            <td>{{cell.Sr_No}}</td>
+            <td class="a">{{cell.instrument_token}}</td>
+            <td class="a">{{cell.exchange_token}}</td>
+            <td class="a">{{cell.tradingsymbol}}</td>
+            <td class="a">{{cell.name}}</td>
+            <td class = "b">{{cell.last_price}}</td>
+            <td class = "b">{{cell.expiry}}</td>
+            <td class = "c">{{cell.strike}}</td>
+            <td class = "b">{{cell.tick_size}}</td>
+            <td class = "c">{{cell.lot_size}}</td>
+            <td class = "b">{{cell.instrument_type}}</td>
+            <td class="a">{{cell.segment}}</td>
+            <td class="a">{{cell.exchange}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
